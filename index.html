@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Project</title>
+    <title>Maze Project</title>
     <style>
         /* Global Styles */
         * {
@@ -63,7 +63,7 @@
 
         /* Intro Section */
         .intro {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cover-image.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('maze-cover.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 150px 20px;
@@ -158,21 +158,6 @@
             line-height: 1.8;
         }
 
-        .team {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .team-member {
-            text-align: center;
-        }
-
-        .team-member h3 {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-
         .social-links a {
             margin: 10px;
             font-size: 1.5rem;
@@ -194,7 +179,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">My Portfolio Project</div>
+        <div class="logo">Maze Project</div>
         <nav>
             <ul>
                 <li><a href="#features">Features</a></li>
@@ -205,9 +190,9 @@
 
     <!-- Intro Section -->
     <section class="intro">
-        <h1>My Amazing Project</h1>
-        <p>Building the future of web development</p>
-        <a href="deployed-app-link.html" class="btn">Visit Application</a>
+        <h1>Maze Project</h1>
+        <p>A 3D Maze Game using Raycasting and SDL2</p>
+        <a href="deployed-app-link.html" class="btn">Play the Game</a>
     </section>
 
     <!-- Feature Section -->
@@ -216,28 +201,28 @@
 
         <!-- Feature 1 -->
         <div class="feature">
-            <img src="feature1-image.jpg" alt="Feature 1">
+            <img src="maze-feature1.jpg" alt="Feature 1">
             <div class="feature-description">
-                <h3>Feature 1: User Authentication</h3>
-                <p>Our project includes a robust user authentication system that allows users to securely register, log in, and manage their profiles.</p>
+                <h3>Feature 1: Realistic Maze Environment</h3>
+                <p>The maze is rendered in 3D using raycasting, creating a realistic environment for players to explore and navigate.</p>
             </div>
         </div>
 
         <!-- Feature 2 -->
         <div class="feature">
-            <img src="feature2-image.jpg" alt="Feature 2">
+            <img src="maze-feature2.jpg" alt="Feature 2">
             <div class="feature-description">
-                <h3>Feature 2: Real-Time Collaboration</h3>
-                <p>Real-time collaboration tools are integrated into the platform, allowing users to work together seamlessly across different devices.</p>
+                <h3>Feature 2: Smooth Player Movement</h3>
+                <p>Player movement is handled smoothly, allowing users to walk through the maze with collision detection, adding to the immersive experience.</p>
             </div>
         </div>
 
         <!-- Feature 3 -->
         <div class="feature">
-            <img src="feature3-image.jpg" alt="Feature 3">
+            <img src="maze-feature3.jpg" alt="Feature 3">
             <div class="feature-description">
-                <h3>Feature 3: Customizable Dashboard</h3>
-                <p>Each user has access to a customizable dashboard that provides a personalized view of the tools and data they need.</p>
+                <h3>Feature 3: Dynamic Lighting and Shadows</h3>
+                <p>The game includes dynamic lighting and shadows that change as players move through the maze, enhancing the visual appeal.</p>
             </div>
         </div>
     </section>
@@ -245,38 +230,20 @@
     <!-- About Section -->
     <section id="about">
         <h2>About the Project</h2>
-        <p>This project was inspired by my personal experiences as a web developer. I wanted to create a platform that solves everyday challenges for developers, and this project has been my passion for the last 6 months. It's also my Portfolio Project for Holberton School.</p>
+        <p>This project was inspired by my interest in creating immersive gaming environments. It started as a challenge to build a 3D maze using raycasting techniques and SDL2. The development process involved implementing wall rendering, player movement, collision detection, and dynamic camera controls. It's my Portfolio Project for Holberton School.</p>
 
-        <div class="team">
-            <!-- Team Member 1 -->
-            <div class="team-member">
-                <img src="team-member1.jpg" alt="Team Member 1">
-                <h3>Team Member 1</h3>
-                <div class="social-links">
-                    <a href="https://github.com/team-member1">GitHub</a>
-                    <a href="https://linkedin.com/in/team-member1">LinkedIn</a>
-                    <a href="https://twitter.com/team-member1">Twitter</a>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="team-member">
-                <img src="team-member2.jpg" alt="Team Member 2">
-                <h3>Team Member 2</h3>
-                <div class="social-links">
-                    <a href="https://github.com/team-member2">GitHub</a>
-                    <a href="https://linkedin.com/in/team-member2">LinkedIn</a>
-                    <a href="https://twitter.com/team-member2">Twitter</a>
-                </div>
-            </div>
+        <div class="social-links">
+            <a href="https://github.com/your-github">GitHub</a>
+            <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a>
+            <a href="https://twitter.com/your-twitter">Twitter</a>
         </div>
 
-        <a href="https://github.com/username/project-repo" class="btn">View GitHub Repository</a>
+        <a href="https://github.com/username/maze-project-repo" class="btn">View GitHub Repository</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 My Portfolio Project. All rights reserved.</p>
+        <p>&copy; 2024 Maze Project. All rights reserved.</p>
     </footer>
 </body>
 </html>
