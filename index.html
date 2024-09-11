@@ -5,93 +5,260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Styles */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        /* Header */
         header {
+            background-color: #101E50;
+            padding: 20px 40px;
+            color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            background-color: #101E50; /* Removed extra # */
-            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 30px;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: background 0.3s ease;
         }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url('hero-bg.jpg') no-repeat center center/cover;
-            color: white;
-        }
-
-        .hero .btn {
-            background-color: #FF3E87; /* Removed extra # */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+        nav a:hover {
+            background-color: #FF3E87;
             border-radius: 5px;
         }
 
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #FF3E87;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f12e6b;
+        }
+
+        /* Sections */
         section {
-            padding: 60px 20px;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #101E50;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background-color: #FF3E87;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        /* About Section */
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         #about img {
             width: 150px;
             border-radius: 50%;
+            margin-bottom: 20px;
         }
 
+        #about p {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
         .project-card {
-            border: 1px solid #ddd; /* Removed extra # */
-            padding: 20px;
-            margin: 20px 0;
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
         }
 
         .project-card img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #101E50; /* Removed extra # */
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin: 20px;
+            color: #101E50;
+        }
+
+        .project-card p {
+            margin: 0 20px 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin: 0 20px 20px;
+            font-weight: bold;
+            color: #FF3E87;
+        }
+
+        /* Contact Section */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #101E50;
             color: white;
+            padding: 15px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF3E87;
+        }
+
+        .social-media {
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            color: #FF3E87;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            color: #101E50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #101E50;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">My Portfolio</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li> <!-- Fixed href -->
-                <li><a href="#about">About</a></li> <!-- Fixed href -->
-                <li><a href="#projects">Projects</a></li> <!-- Fixed href -->
-                <li><a href="#contact">Contact</a></li> <!-- Fixed href -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Welcome to My Portfolio</h1>
         <p>Hi, I'm [Your Name], a [Your Profession].</p>
         <a href="resume.pdf" class="btn">Download Resume</a>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <img src="profile.jpg" alt="Profile Picture">
@@ -104,6 +271,7 @@
         </ul>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-card">
@@ -116,16 +284,14 @@
         <!-- Repeat for more projects -->
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
         <div class="social-media">
             <a href="https://twitter.com/username">Twitter</a>
@@ -134,8 +300,9 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 [Jamal]. All rights reserved.</p>
     </footer>
 </body>
 </html>
