@@ -1,252 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Project</title>
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        /* Header */
-        header {
-            background-color: #101E50;
-            padding: 20px 40px;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav a {
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            transition: background 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #FF3E87;
-            border-radius: 5px;
-        }
-
-        /* Intro Section */
-        .intro {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('maze-cover.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-            position: relative;
-        }
-
-        .intro h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background-color: #FF3E87;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #f12e6b;
-        }
-
-        /* Feature Section */
-        .features {
-            padding: 80px 40px;
-            background-color: #f5f5f5;
-        }
-
-        .features h2 {
-            font-size: 2.5rem;
-            color: #101E50;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            gap: 30px;
-        }
-
-        .feature:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .feature img {
-            width: 50%;
-            border-radius: 8px;
-        }
-
-        .feature-description {
-            flex: 1;
-        }
-
-        .feature-description h3 {
-            font-size: 1.8rem;
-            color: #FF3E87;
-            margin-bottom: 20px;
-        }
-
-        .feature-description p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        /* About Section */
-        #about {
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        #about h2 {
-            font-size: 2.5rem;
-            color: #101E50;
-            margin-bottom: 40px;
-        }
-
-        #about p {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .social-links a {
-            margin: 10px;
-            font-size: 1.5rem;
-            color: #FF3E87;
-        }
-
-        .social-links a:hover {
-            color: #101E50;
-        }
-
-        footer {
-            background-color: #101E50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Maze Project</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Maze Project</div>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Intro Section -->
-    <section class="intro">
-        <h1>Maze Project</h1>
-        <p>A 3D Maze Game using Raycasting and SDL2</p>
-        <a href="deployed-app-link.html" class="btn">Play the Game</a>
-    </section>
+  <!-- Intro Section -->
+  <header>
+    <div class="intro-section">
+      <img src="maze-cover.jpg" alt="Maze Cover Image" class="cover-image">
+      <h1>3D Maze Project</h1>
+      <p>Navigate through a 3D maze built with raycasting and SDL2!</p>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <a href="https://link-to-deployed-maze-project" class="button">Play the Maze</a>
+    </div>
+  </header>
 
-    <!-- Feature Section -->
-    <section id="features" class="features">
-        <h2>Key Features</h2>
+  <!-- Feature Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="feature">
+      <img src="feature1.gif" alt="Feature 1">
+      <h3>Raycasting Engine</h3>
+      <p>Experience real-time 3D rendering using a custom raycasting engine.</p>
+    </div>
+    <div class="feature">
+      <img src="feature2.jpg" alt="Feature 2">
+      <h3>Dynamic Player Movement</h3>
+      <p>Move through the maze with smooth, responsive controls.</p>
+    </div>
+    <div class="feature">
+      <img src="feature3.jpg" alt="Feature 3">
+      <h3>Textured Walls</h3>
+      <p>Realistic textures enhance the immersion as you explore the maze.</p>
+    </div>
+  </section>
 
-        <!-- Feature 1 -->
-        <div class="feature">
-            <img src="maze-feature1.jpg" alt="Feature 1">
-            <div class="feature-description">
-                <h3>Feature 1: Realistic Maze Environment</h3>
-                <p>The maze is rendered in 3D using raycasting, creating a realistic environment for players to explore and navigate.</p>
-            </div>
-        </div>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About the Project</h2>
+    <p>This project was inspired by classic 3D games like Wolfenstein 3D. It showcases the power of raycasting for real-time 3D rendering in games.</p>
+    <h3>Team Members</h3>
+    <ul>
+      <li><a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/your-github" target="_blank">GitHub</a></li>
+      <li><a href="https://twitter.com/your-twitter" target="_blank">Twitter</a></li>
+    </ul>
+    <a href="https://github.com/your-repository" target="_blank">GitHub Repository</a>
+  </section>
 
-        <!-- Feature 2 -->
-        <div class="feature">
-            <img src="maze-feature2.jpg" alt="Feature 2">
-            <div class="feature-description">
-                <h3>Feature 2: Smooth Player Movement</h3>
-                <p>Player movement is handled smoothly, allowing users to walk through the maze with collision detection, adding to the immersive experience.</p>
-            </div>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feature">
-            <img src="maze-feature3.jpg" alt="Feature 3">
-            <div class="feature-description">
-                <h3>Feature 3: Dynamic Lighting and Shadows</h3>
-                <p>The game includes dynamic lighting and shadows that change as players move through the maze, enhancing the visual appeal.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About the Project</h2>
-        <p>This project was inspired by my interest in creating immersive gaming environments. It started as a challenge to build a 3D maze using raycasting techniques and SDL2. The development process involved implementing wall rendering, player movement, collision detection, and dynamic camera controls. It's my Portfolio Project for Holberton School.</p>
-
-        <div class="social-links">
-            <a href="https://github.com/your-github">GitHub</a>
-            <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a>
-            <a href="https://twitter.com/your-twitter">Twitter</a>
-        </div>
-
-	<div>
-		<a href="https://github.com/username/maze-project-repo" class="btn">View GitHub Repository</a>
-	</div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Maze Project. All rights reserved.</p>
-    </footer>
 </body>
 </html>
 
